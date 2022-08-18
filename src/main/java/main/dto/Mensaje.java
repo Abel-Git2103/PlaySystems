@@ -30,8 +30,8 @@ public class Mensaje {
 	private LocalDateTime hora;
 
 	@ManyToOne
-	@JoinColumn(name = "Id_chat")
-	private Chat chat;
+	@JoinColumn(name = "Id_grupo")
+	private Grupo grupo;
 
 	@ManyToOne
 	@JoinColumn(name = "Username")
@@ -45,14 +45,14 @@ public class Mensaje {
 	 * @param id
 	 * @param contenido
 	 * @param hora
-	 * @param chat
+	 * @param grupo
 	 * @param usuario
 	 */
-	public Mensaje(int id_mensaje, String contenido, LocalDateTime hora, Chat chat, Usuario usuario) {
+	public Mensaje(int id_mensaje, String contenido, LocalDateTime hora, Grupo grupo, Usuario usuario) {
 		this.id_mensaje = id_mensaje;
 		this.contenido = contenido;
 		this.hora = hora;
-		this.chat = chat;
+		this.grupo = grupo;
 		this.usuario = usuario;
 	}
 
@@ -81,12 +81,12 @@ public class Mensaje {
 		this.hora = hora;
 	}
 
-	public Chat getChat() {
-		return chat;
+	public Grupo getGrupo() {
+		return grupo;
 	}
 	
-	public void setChat(Chat chat) {
-		this.chat = chat;
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
 	}
 
 	public Usuario getUsuario() {
@@ -100,7 +100,7 @@ public class Mensaje {
 	// METODO TO STRING
 	@Override
 	public String toString() {
-		return "Mensaje [id_mensaje=" + id_mensaje + ", contenido=" + contenido + ", hora=" + hora + ", chat=" + chat
+		return "Mensaje [id_mensaje=" + id_mensaje + ", contenido=" + contenido + ", hora=" + hora + ", grupo=" + grupo
 				+ ", usuario=" + usuario + "]";
 	}
 

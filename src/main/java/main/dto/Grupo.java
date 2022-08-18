@@ -38,6 +38,10 @@ public class Grupo {
 	@OneToMany
 	@JoinColumn(name = "Id_grupo")
 	private List<Usuario> usuarios;
+	
+	@OneToMany
+	@JoinColumn(name = "Id_grupo")
+	private List<Mensaje> mensaje;	
 
 	public Grupo() {
 		super();
@@ -91,6 +95,16 @@ public class Grupo {
 
 	public void setUsuarios(List<Usuario> usuarios) {
 		this.usuarios = usuarios;
+	}
+	
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Mensaje")
+	public List<Mensaje> getMensaje() {
+		return mensaje;
+	}
+
+	public void setMensaje(List<Mensaje> mensaje) {
+		this.mensaje = mensaje;
 	}
 
 	@Override
