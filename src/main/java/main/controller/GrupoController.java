@@ -59,6 +59,7 @@ public class GrupoController {
 		grupo_seleccionado.setJuego(grupo.getJuego());
 		grupo_seleccionado.setDescripcion(grupo.getDescripcion());
 		grupo_seleccionado.setUsuarios(grupo.getUsuarios());
+		grupo_seleccionado.setMensaje(grupo.getMensaje());
 
 		grupo_actualizado = grupoServiceImpl.actualizarGrupo(grupo_seleccionado);
 

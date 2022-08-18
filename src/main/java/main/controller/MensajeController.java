@@ -64,6 +64,8 @@ public class MensajeController {
 
 		mensaje_seleccionado.setContenido(mensaje.getContenido());
 		mensaje_seleccionado.setHora(mensaje.getHora());
+		mensaje_seleccionado.setGrupo(mensaje.getGrupo());
+		mensaje_seleccionado.setUsuario(mensaje.getUsuario());
 
 		mensaje_actualizado = mensajeServiceImpl.actualizarMensaje(mensaje_seleccionado);
 
