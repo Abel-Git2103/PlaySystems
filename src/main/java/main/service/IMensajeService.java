@@ -2,13 +2,14 @@ package main.service;
 
 import java.util.List;
 
+import main.dto.Grupo;
 import main.dto.Mensaje;
 
 public interface IMensajeService {
 
 	public List<Mensaje> listarMensaje();
 	
-	//public List<Mensaje> findByChat(Chat Id_Chat);
+	public List<Mensaje> findByGroup(Grupo Id_Grupo);
 		
 	public Mensaje guardarMensaje(Mensaje mensaje);
 	

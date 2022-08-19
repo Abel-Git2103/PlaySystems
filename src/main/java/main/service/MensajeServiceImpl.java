@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import main.dao.IMensajeDao;
+import main.dto.Grupo;
 import main.dto.Mensaje;
 
 @Service
@@ -39,9 +40,9 @@ public class MensajeServiceImpl implements IMensajeService {
 		iMensajeDao.deleteById(id);
 	}
 
-//	@Override
-//	public List<Mensaje> findByChat(Chat Id_Chat) {
-//		return iMensajeDao.findByChat(Id_Chat);
-//	}
+	@Override
+	public List<Mensaje> findByGroup(Grupo Id_Grupo) {
+		return iMensajeDao.findByGroup(Id_Grupo);
+	}
 
 }
