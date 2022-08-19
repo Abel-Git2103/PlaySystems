@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import main.dto.Grupo;
 import main.dto.Mensaje;
 import main.service.MensajeServiceImpl;
 
@@ -49,10 +50,10 @@ public class MensajeController {
 		return mensajeXID;
 	}
 
-//	@GetMapping("/mensajes/chat/{Id_Chat}")
-//	public List<Mensaje> findByChat(@PathVariable(value = "Id_Chat") Chat Id_Chat) {
-//		return mensajeServiceImpl.findByChat(Id_Chat);
-//	}
+	@GetMapping("/mensajes/grupo/{Id_Grupo}")
+	public List<Mensaje> findByGroup(@PathVariable(value = "Id_Grupo") Grupo Id_Grupo) {
+		return mensajeServiceImpl.findByGroup(Id_Grupo);
+	}
 	
 	@PutMapping("/mensajes/{id}")
 	public Mensaje actualizarMensaje(@PathVariable(name = "id") Integer id, @RequestBody Mensaje mensaje) {
