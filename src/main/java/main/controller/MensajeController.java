@@ -51,8 +51,8 @@ public class MensajeController {
 	}
 
 	@GetMapping("/mensajes/grupo/{Id_Grupo}")
-	public List<Mensaje> findByGroup(@PathVariable(value = "Id_Grupo") Grupo Id_Grupo) {
-		return mensajeServiceImpl.findByGroup(Id_Grupo);
+	public List<Mensaje> findByGrupo(@PathVariable(value = "Id_Grupo") Grupo Id_Grupo) {
+		return mensajeServiceImpl.findByGrupo(Id_Grupo);
 	}
 	
 	@PutMapping("/mensajes/{id}")

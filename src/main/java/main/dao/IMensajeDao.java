@@ -12,5 +12,5 @@ import main.dto.Mensaje;
 public interface IMensajeDao extends JpaRepository<Mensaje, Integer> {
 	
 	@Query
-	List<Mensaje> findByGroup(@Param("Id_Grupo")Grupo Id_Grupo);
+	List<Mensaje> findByGrupo(@Param("Id_Grupo")Grupo Id_Grupo);
 }

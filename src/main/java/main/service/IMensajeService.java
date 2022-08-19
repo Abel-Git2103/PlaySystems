@@ -9,7 +9,7 @@ public interface IMensajeService {
 
 	public List<Mensaje> listarMensaje();
 	
-	public List<Mensaje> findByGroup(Grupo Id_Grupo);
+	public List<Mensaje> findByGrupo(Grupo Id_Grupo);
 		
 	public Mensaje guardarMensaje(Mensaje mensaje);
 	

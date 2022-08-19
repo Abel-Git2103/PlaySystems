@@ -41,8 +41,8 @@ public class MensajeServiceImpl implements IMensajeService {
 	}
 
 	@Override
-	public List<Mensaje> findByGroup(Grupo Id_Grupo) {
-		return iMensajeDao.findByGroup(Id_Grupo);
+	public List<Mensaje> findByGrupo(Grupo Id_Grupo) {
+		return iMensajeDao.findByGrupo(Id_Grupo);
 	}
 
 }
